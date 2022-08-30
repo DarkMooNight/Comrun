@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="RectangleShape2D" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+[node name="controller" type="Control"]
+anchor_top = 0.222
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 0.0399971
+margin_bottom = 1.0
+
+[node name="Jump" type="Control" parent="."]
+anchor_left = 1.0
+anchor_top = 0.222
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -160.0
+margin_top = 0.0399971
+
+[node name="junp" type="TouchScreenButton" parent="Jump"]
+position = Vector2( 0, -30 )
+scale = Vector2( 8, 7 )
+shape = SubResource( 2 )
+action = "ui_up"
+
+[node name="Crouth" type="Control" parent="."]
+anchor_top = 0.222
+anchor_bottom = 1.0
+margin_top = 0.0399971
+margin_right = 160.0
+
+[node name="crouth" type="TouchScreenButton" parent="Crouth"]
+position = Vector2( 0, -30 )
+scale = Vector2( 8, 7 )
+shape = SubResource( 1 )
+action = "ui_down"

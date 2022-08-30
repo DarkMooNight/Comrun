@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Blip Stream.mp3-5d0c3845800d73268ca2d3724a0e2169.mp3str"
+
+[deps]
+
+source_file="res://game_music/Blip Stream.mp3"
+dest_files=[ "res://.import/Blip Stream.mp3-5d0c3845800d73268ca2d3724a0e2169.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

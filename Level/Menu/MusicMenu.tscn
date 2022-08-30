@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://ui_menu/sound_off.png" type="Texture" id=1]
+[ext_resource path="res://ui_menu/sound_on.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/MusicMenu.gd" type="Script" id=3]
+
+[node name="MusicMenu" type="Control"]
+margin_right = 26.0
+margin_bottom = 26.0
+script = ExtResource( 3 )
+
+[node name="Off_on" type="TextureButton" parent="."]
+margin_right = 26.0
+margin_bottom = 26.0
+toggle_mode = true
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 1 )
+expand = true
+stretch_mode = 5
+
+[connection signal="pressed" from="Off_on" to="." method="_on_Off_on_pressed"]

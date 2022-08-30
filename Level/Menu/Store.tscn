@@ -1,0 +1,422 @@
+[gd_scene load_steps=43 format=2]
+
+[ext_resource path="res://character/character_normal.png" type="Texture" id=1]
+[ext_resource path="res://ui_menu/ramka_aseprite.png" type="Texture" id=2]
+[ext_resource path="res://ui_menu/pressed-plus-money_aseprite.png" type="Texture" id=3]
+[ext_resource path="res://ui_menu/left-pressed-bottum_aseprite.png" type="Texture" id=4]
+[ext_resource path="res://ui_menu/selected_button.png" type="Texture" id=5]
+[ext_resource path="res://ui_menu/right-pressed-bottum_aseprite.png" type="Texture" id=6]
+[ext_resource path="res://Ui/Born2bSportyV2.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://ui_menu/right-select-bottum_aseprite.png" type="Texture" id=8]
+[ext_resource path="res://ui_menu/selected_button_press.png" type="Texture" id=9]
+[ext_resource path="res://ui_menu/left-selet-bottum_aseprite.png" type="Texture" id=10]
+[ext_resource path="res://Scripts/Store.gd" type="Script" id=11]
+[ext_resource path="res://character/character_red.png" type="Texture" id=12]
+[ext_resource path="res://character/character_normal2.png" type="Texture" id=13]
+[ext_resource path="res://character/character_normal3.png" type="Texture" id=14]
+[ext_resource path="res://character/character_normal4.png" type="Texture" id=15]
+[ext_resource path="res://character/character_red2.png" type="Texture" id=16]
+[ext_resource path="res://character/character_red3.png" type="Texture" id=17]
+[ext_resource path="res://character/character_red4.png" type="Texture" id=18]
+[ext_resource path="res://Scripts/Coin.gd" type="Script" id=19]
+[ext_resource path="res://Ui/coin.png" type="Texture" id=20]
+[ext_resource path="res://ui_menu/plus-moneu_aseprite.png" type="Texture" id=21]
+[ext_resource path="res://yandex-ads-lib/yandex_ads.gd" type="Script" id=22]
+[ext_resource path="res://Scripts/random_bg.gd" type="Script" id=23]
+[ext_resource path="res://character/character_chaplin4.png" type="Texture" id=29]
+[ext_resource path="res://character/character_chaplin3.png" type="Texture" id=30]
+[ext_resource path="res://character/character_chaplin2.png" type="Texture" id=31]
+[ext_resource path="res://character/character_chaplin.png" type="Texture" id=32]
+[ext_resource path="res://character/character_night.png" type="Texture" id=33]
+[ext_resource path="res://character/character_night1.png" type="Texture" id=34]
+[ext_resource path="res://character/character_night3.png" type="Texture" id=35]
+[ext_resource path="res://character/character_night2.png" type="Texture" id=36]
+
+[sub_resource type="Shader" id=13]
+code = "shader_type canvas_item;
+
+void fragment(){
+	vec4 color = texture(SCREEN_TEXTURE, SCREEN_UV, 0.5);
+	COLOR = color;
+}"
+
+[sub_resource type="ShaderMaterial" id=11]
+shader = SubResource( 13 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 9
+font_data = ExtResource( 7 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "character_chaplin"
+length = 0.6
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("table/Players/Name:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "Chaplin" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("table/Players/character:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.15, 0.3, 0.45 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 32 ), ExtResource( 31 ), ExtResource( 30 ), ExtResource( 29 ) ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "character_night"
+length = 0.6
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("table/Players/Name:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "Nigth" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("table/Players/character:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.15, 0.3, 0.45 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 33 ), ExtResource( 34 ), ExtResource( 36 ), ExtResource( 35 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+length = 0.6
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("table/Players/character:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.15, 0.3, 0.45 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("table/Players/Name:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "Default" ]
+}
+
+[sub_resource type="Animation" id=12]
+length = 0.6
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("table/Players/character:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.15, 0.3, 0.45 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 12 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("table/Players/Name:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "Christmas" ]
+}
+
+[sub_resource type="DynamicFont" id=6]
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=8]
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 20
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 7 )
+
+[node name="Store" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_vertical_guides_": [  ]
+}
+
+[node name="bg" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="random_bg" type="Control" parent="bg"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 23 )
+
+[node name="ColorRect" type="ColorRect" parent="bg"]
+modulate = Color( 0.870588, 0.870588, 0.870588, 1 )
+material = SubResource( 11 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Book2" type="TextureRect" parent="bg"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+expand = true
+
+[node name="table" type="Control" parent="."]
+anchor_left = 0.489
+anchor_top = 0.05
+anchor_right = 0.489
+anchor_bottom = 0.933
+margin_left = -73.48
+margin_right = 73.52
+margin_bottom = 0.0599976
+
+[node name="Players" type="VBoxContainer" parent="table"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = 0.04599
+custom_constants/separation = 5
+
+[node name="NameScene" type="Label" parent="table/Players"]
+margin_right = 147.0
+margin_bottom = 32.0
+custom_colors/font_color = Color( 1, 0.835294, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_y = 2
+custom_fonts/font = SubResource( 1 )
+text = "STORE"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="Label" parent="table/Players"]
+margin_top = 37.0
+margin_right = 147.0
+margin_bottom = 47.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Chaplin"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="character" type="TextureRect" parent="table/Players"]
+margin_top = 52.0
+margin_right = 147.0
+margin_bottom = 124.0
+texture = ExtResource( 32 )
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="button" type="Control" parent="table/Players"]
+margin_top = 129.0
+margin_right = 147.0
+margin_bottom = 129.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="left" type="TextureButton" parent="table/Players/button"]
+margin_left = 30.0
+margin_right = 52.0
+margin_bottom = 22.0
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 4 )
+expand = true
+
+[node name="center" type="TextureButton" parent="table/Players/button"]
+anchor_left = 0.367
+anchor_right = 0.639
+margin_left = -0.949001
+margin_right = 1.067
+margin_bottom = 22.0
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 9 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Price" type="Label" parent="table/Players/button/center"]
+margin_left = 0.999995
+margin_top = 3.0
+margin_right = 41.0
+margin_bottom = 18.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_y = 0
+custom_fonts/font = SubResource( 2 )
+text = "Выбрать"
+align = 1
+valign = 1
+
+[node name="right" type="TextureButton" parent="table/Players/button"]
+margin_left = 96.0
+margin_right = 118.0
+margin_bottom = 22.0
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 6 )
+expand = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/character_chaplin = SubResource( 3 )
+anims/character_night = SubResource( 10 )
+anims/character_normal = SubResource( 4 )
+anims/character_red = SubResource( 12 )
+
+[node name="Coin" type="HBoxContainer" parent="."]
+anchor_left = 0.762
+anchor_top = 0.078
+anchor_right = 0.762
+anchor_bottom = 0.189
+margin_left = -27.84
+margin_top = -0.04
+margin_right = 28.16
+margin_bottom = -0.0200005
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 19 )
+
+[node name="TextureRect" type="TextureRect" parent="Coin"]
+margin_right = 20.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 20 )
+expand = true
+
+[node name="Label2" type="Label" parent="Coin"]
+margin_left = 24.0
+margin_top = 2.0
+margin_right = 27.0
+margin_bottom = 18.0
+size_flags_vertical = 6
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 0
+custom_constants/shadow_offset_y = 2
+custom_fonts/font = SubResource( 6 )
+text = ":"
+align = 1
+valign = 1
+
+[node name="Label" type="Label" parent="Coin"]
+margin_left = 31.0
+margin_top = 2.0
+margin_right = 56.0
+margin_bottom = 18.0
+rect_min_size = Vector2( 25, 16 )
+size_flags_vertical = 6
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 0
+custom_constants/shadow_offset_y = 2
+custom_fonts/font = SubResource( 6 )
+text = "0"
+valign = 1
+
+[node name="CoinPlus" type="TextureButton" parent="."]
+anchor_left = 0.885
+anchor_top = 0.094
+anchor_right = 0.885
+anchor_bottom = 0.174
+margin_left = -7.20001
+margin_top = 0.0799999
+margin_right = 13.8
+margin_bottom = 3.68
+rect_scale = Vector2( 0.7, 0.8 )
+texture_normal = ExtResource( 21 )
+texture_pressed = ExtResource( 3 )
+
+[node name="Back" type="Button" parent="."]
+anchor_left = 0.028
+anchor_top = 0.067
+anchor_right = 0.128
+anchor_bottom = 0.189
+margin_left = 0.04
+margin_top = -0.0600004
+margin_right = 0.0399971
+margin_bottom = -0.0200005
+focus_mode = 0
+custom_fonts/font = SubResource( 8 )
+flat = true
+
+[node name="Label" type="Label" parent="Back"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -23.0
+margin_top = -22.0
+margin_right = 23.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 0
+custom_constants/shadow_offset_y = 2
+custom_fonts/font = SubResource( 9 )
+text = "<"
+align = 1
+valign = 1
+
+[node name="Yandex" type="Node" parent="."]
+script = ExtResource( 22 )
+rewarded_id = "R-M-1663731-1"
+
+[connection signal="pressed" from="table/Players/button/left" to="." method="_on_left_pressed"]
+[connection signal="pressed" from="table/Players/button/center" to="." method="_on_center_pressed"]
+[connection signal="pressed" from="table/Players/button/right" to="." method="_on_right_pressed"]
+[connection signal="pressed" from="CoinPlus" to="." method="_on_CoinPlus_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]
+[connection signal="rewarded" from="Yandex" to="." method="_on_Yandex_rewarded"]
+[connection signal="rewarded_video_loaded" from="Yandex" to="." method="_on_Yandex_rewarded_video_loaded"]

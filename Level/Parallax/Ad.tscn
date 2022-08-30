@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sprites/Rocky Roads/background3.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Rocky Roads/background_red.png" type="Texture" id=2]
+
+[node name="Ad" type="ParallaxBackground"]
+
+[node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 1, 0.882353, 0.882353, 1 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2( 512, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxLayer4"]
+modulate = Color( 0.878431, 0.878431, 0.878431, 1 )
+position = Vector2( 0, -20 )
+scale = Vector2( 1.05859, 1 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2( 512, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxLayer"]
+texture = ExtResource( 1 )
+centered = false

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://tile/green/tileset_green.tres" type="TileSet" id=1]
+
+[node name="green" type="TileMap"]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+collision_layer = 6
+collision_mask = 9
+format = 1

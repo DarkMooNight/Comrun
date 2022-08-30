@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Drum_snare_50.wav-8e320dd035c1028abe8d918132e70107.sample"
+
+[deps]
+
+source_file="res://game_music/Drum_snare_50.wav"
+dest_files=[ "res://.import/Drum_snare_50.wav-8e320dd035c1028abe8d918132e70107.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

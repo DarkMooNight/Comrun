@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sprites/Rocky Roads/background_red.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Rocky Roads/background3.png" type="Texture" id=2]
+
+[node name="Bg_ad" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="bg" type="TextureRect" parent="."]
+modulate = Color( 1, 0.882353, 0.882353, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="rog_2" type="TextureRect" parent="."]
+modulate = Color( 0.878431, 0.878431, 0.878431, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+expand = true
+
+[node name="rog_1" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 14.0
+margin_right = 14.0
+texture = ExtResource( 2 )
+expand = true

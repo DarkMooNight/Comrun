@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Sprites/Rocky Roads/background2.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Rocky Roads/background_blue.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Rocky Roads/3 - Cloud_cover_1.png" type="Texture" id=3]
+
+[sub_resource type="Shader" id=231]
+code = "shader_type canvas_item;
+
+uniform vec2 Direction = vec2(1.0,0.0);
+uniform float Speed = 0.03f;
+
+void fragment(){
+	COLOR = texture(TEXTURE, UV + (Direction * TIME * Speed));
+}"
+
+[sub_resource type="ShaderMaterial" id=232]
+shader = SubResource( 231 )
+shader_param/Direction = Vector2( 1, 0 )
+shader_param/Speed = 0.03
+
+[node name="Bg_winter" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="bg" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+expand = true
+
+[node name="rog" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="Sprite" type="Sprite" parent="."]
+material = SubResource( 232 )
+texture = ExtResource( 3 )
+centered = false

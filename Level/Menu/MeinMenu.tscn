@@ -1,0 +1,416 @@
+[gd_scene load_steps=36 format=2]
+
+[ext_resource path="res://character/character_normal.png" type="Texture" id=1]
+[ext_resource path="res://Ui/Born2bSportyV2.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Scripts/MeinMenu.gd" type="Script" id=3]
+[ext_resource path="res://Level/Menu/MusicMenu.tscn" type="PackedScene" id=4]
+[ext_resource path="res://character/character_normal2.png" type="Texture" id=5]
+[ext_resource path="res://character/character_normal3.png" type="Texture" id=6]
+[ext_resource path="res://character/character_normal4.png" type="Texture" id=7]
+[ext_resource path="res://Level/Menu/SoundMenu.tscn" type="PackedScene" id=8]
+[ext_resource path="res://ui_menu/ramka_aseprite.png" type="Texture" id=9]
+[ext_resource path="res://ui_menu/main_menu.png" type="Texture" id=10]
+[ext_resource path="res://ui_menu/rack_for_hero_aseprite.png" type="Texture" id=11]
+[ext_resource path="res://ui_menu/Ru-En_aseprite.png" type="Texture" id=12]
+[ext_resource path="res://Scripts/Play.gd" type="Script" id=13]
+[ext_resource path="res://character/character_chaplin.png" type="Texture" id=14]
+[ext_resource path="res://character/character_night2.png" type="Texture" id=15]
+[ext_resource path="res://character/character_night1.png" type="Texture" id=16]
+[ext_resource path="res://character/character_night3.png" type="Texture" id=17]
+[ext_resource path="res://character/character_night.png" type="Texture" id=18]
+[ext_resource path="res://character/character_chaplin4.png" type="Texture" id=19]
+[ext_resource path="res://character/character_chaplin3.png" type="Texture" id=20]
+[ext_resource path="res://character/character_chaplin1.png" type="Texture" id=21]
+[ext_resource path="res://character/character_red.png" type="Texture" id=22]
+[ext_resource path="res://character/character_red3.png" type="Texture" id=23]
+[ext_resource path="res://character/character_red4.png" type="Texture" id=24]
+[ext_resource path="res://character/character_red2.png" type="Texture" id=25]
+[ext_resource path="res://Scripts/random_bg.gd" type="Script" id=26]
+
+[sub_resource type="Shader" id=7]
+code = "shader_type canvas_item;
+
+void fragment(){
+	vec4 color = texture(SCREEN_TEXTURE, SCREEN_UV, 0.5);
+	COLOR = color;
+}"
+
+[sub_resource type="ShaderMaterial" id=6]
+shader = SubResource( 7 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 12
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 12
+font_data = ExtResource( 2 )
+
+[sub_resource type="Animation" id=11]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Player:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ ExtResource( 16 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "character_chaplin"
+length = 0.55
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Player:flip_h")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Player:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.15, 0.3, 0.45 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 14 ), ExtResource( 21 ), ExtResource( 20 ), ExtResource( 19 ) ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "character_night"
+length = 0.55
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Player:flip_h")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Player:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.15, 0.3, 0.45 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 18 ), ExtResource( 16 ), ExtResource( 15 ), ExtResource( 17 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "character_normal"
+length = 0.6
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Player:flip_h")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Player:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.15, 0.3, 0.45 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "character_red"
+length = 0.55
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Player:flip_h")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Player:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.15, 0.3, 0.45 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 22 ), ExtResource( 25 ), ExtResource( 23 ), ExtResource( 24 ) ]
+}
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 3 )
+
+[node name="bg" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="random_bg" type="Control" parent="bg"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 26 )
+
+[node name="ColorRect" type="ColorRect" parent="bg"]
+modulate = Color( 0.878431, 0.878431, 0.878431, 1 )
+material = SubResource( 6 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Book" type="TextureRect" parent="bg"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 9 )
+expand = true
+
+[node name="Control" type="Control" parent="."]
+margin_right = 190.0
+margin_bottom = 180.0
+
+[node name="Menu" type="TextureRect" parent="Control"]
+anchor_left = 0.053
+anchor_top = 0.1
+anchor_right = 0.586
+anchor_bottom = 0.887
+margin_left = 6.93
+margin_right = 47.66
+margin_bottom = -23.66
+rect_scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 10 )
+expand = true
+
+[node name="Buttons" type="VBoxContainer" parent="Control/Menu"]
+anchor_left = 0.014
+anchor_top = 0.415
+anchor_right = 0.725
+anchor_bottom = 1.008
+margin_left = 0.012
+margin_top = 0.0299988
+margin_right = 0.0499954
+margin_bottom = 0.0559998
+rect_min_size = Vector2( 100, 0 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 5
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="StartGame" type="Button" parent="Control/Menu/Buttons"]
+margin_right = 101.0
+margin_bottom = 20.0
+focus_mode = 0
+enabled_focus_mode = 0
+flat = true
+
+[node name="Label" type="Label" parent="Control/Menu/Buttons/StartGame"]
+anchor_top = 0.133
+anchor_right = 1.0
+anchor_bottom = 0.983
+margin_left = -0.333333
+margin_top = 0.00666404
+margin_right = -0.333336
+margin_bottom = 0.00666428
+custom_fonts/font = SubResource( 2 )
+text = "START"
+align = 1
+valign = 1
+
+[node name="Store" type="Button" parent="Control/Menu/Buttons"]
+margin_top = 25.0
+margin_right = 101.0
+margin_bottom = 45.0
+focus_mode = 0
+enabled_focus_mode = 0
+flat = true
+
+[node name="Label" type="Label" parent="Control/Menu/Buttons/Store"]
+anchor_top = 0.092
+anchor_right = 1.0
+anchor_bottom = 0.942
+margin_left = -0.333333
+margin_top = -0.00667191
+margin_right = -0.333336
+margin_bottom = -0.00667191
+custom_fonts/font = SubResource( 2 )
+text = "STORE1"
+align = 1
+valign = 1
+
+[node name="Exit" type="Button" parent="Control/Menu/Buttons"]
+margin_top = 50.0
+margin_right = 101.0
+margin_bottom = 70.0
+focus_mode = 0
+enabled_focus_mode = 0
+flat = true
+
+[node name="Label" type="Label" parent="Control/Menu/Buttons/Exit"]
+anchor_top = 0.008
+anchor_right = 1.0
+anchor_bottom = 0.958
+margin_left = -0.333333
+margin_top = 0.00666411
+margin_right = -0.333336
+margin_bottom = 0.00666237
+custom_fonts/font = SubResource( 2 )
+text = "EXIT"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play" type="Control" parent="."]
+anchor_left = 0.541
+anchor_top = 0.294
+anchor_right = 0.541
+anchor_bottom = 0.294
+margin_left = -0.119995
+margin_top = 0.0800018
+margin_right = 147.88
+margin_bottom = 122.08
+script = ExtResource( 13 )
+
+[node name="Player" type="TextureRect" parent="Play"]
+anchor_right = 1.0
+anchor_bottom = 0.697
+margin_bottom = -0.0340042
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 16 )
+stretch_mode = 4
+flip_h = true
+
+[node name="platform" type="TextureRect" parent="Play"]
+anchor_left = 0.345
+anchor_top = 0.639
+anchor_right = 0.615
+anchor_bottom = 0.689
+margin_left = -0.0600014
+margin_top = 0.0419922
+margin_right = -0.0200043
+margin_bottom = -1.058
+texture = ExtResource( 11 )
+expand = true
+
+[node name="ru_en" type="TextureRect" parent="Play"]
+anchor_left = 0.277
+anchor_top = 0.68
+anchor_right = 0.662
+anchor_bottom = 0.844
+margin_left = 0.0039978
+margin_top = 0.0400009
+margin_right = 0.0239944
+margin_bottom = 0.0319977
+texture = ExtResource( 12 )
+expand = true
+
+[node name="Settings" type="HBoxContainer" parent="Play"]
+anchor_left = 0.264
+anchor_top = -0.221
+anchor_right = 0.676
+anchor_bottom = -0.025
+margin_left = -0.0719986
+margin_top = -0.0380001
+margin_right = -0.0480118
+margin_bottom = 0.0499961
+custom_constants/separation = 35
+
+[node name="MusicMenu" parent="Play/Settings" instance=ExtResource( 4 )]
+margin_right = 0.0
+margin_bottom = 23.0
+
+[node name="SoundMenu" parent="Play/Settings" instance=ExtResource( 8 )]
+margin_left = 35.0
+margin_right = 35.0
+margin_bottom = 23.0
+
+[node name="Settings2" type="HBoxContainer" parent="Play"]
+anchor_left = 0.297
+anchor_top = 0.68
+anchor_right = 0.669
+anchor_bottom = 0.844
+margin_left = 0.0439987
+margin_top = 0.0400009
+margin_right = -0.012001
+margin_bottom = 0.0319977
+custom_constants/separation = 6
+
+[node name="En" type="Button" parent="Play/Settings2"]
+margin_right = 22.0
+margin_bottom = 19.0
+focus_mode = 0
+custom_fonts/font = SubResource( 4 )
+text = "En"
+flat = true
+
+[node name="Ru" type="Button" parent="Play/Settings2"]
+margin_left = 28.0
+margin_right = 50.0
+margin_bottom = 19.0
+focus_mode = 0
+custom_fonts/font = SubResource( 4 )
+text = "Ru"
+flat = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Play"]
+anims/RESET = SubResource( 11 )
+anims/character_chaplin = SubResource( 8 )
+anims/character_night = SubResource( 10 )
+anims/character_normal = SubResource( 3 )
+anims/character_red = SubResource( 9 )
+
+[connection signal="pressed" from="Control/Menu/Buttons/StartGame" to="." method="_on_StartGame_pressed"]
+[connection signal="pressed" from="Control/Menu/Buttons/Store" to="." method="_on_Store_pressed"]
+[connection signal="pressed" from="Control/Menu/Buttons/Exit" to="." method="_on_Exit_pressed"]
+[connection signal="pressed" from="Play/Settings2/En" to="." method="_on_En_pressed"]
+[connection signal="pressed" from="Play/Settings2/Ru" to="." method="_on_Ru_pressed"]
