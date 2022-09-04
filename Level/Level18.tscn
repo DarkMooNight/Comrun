@@ -43,7 +43,7 @@ visible = false
 
 [node name="Win" parent="HUD" instance=ExtResource( 11 )]
 visible = false
-world_scene = "res://Level/Level10.tscn"
+world_scene = "res://Level/Level19.tscn"
 
 [node name="StartRun" parent="HUD" instance=ExtResource( 10 )]
 pause_mode = 2

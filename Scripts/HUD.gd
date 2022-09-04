@@ -50,6 +50,7 @@ func _initialize():
 
 func _on_GameOver_Continue():
 	time_life.value = max_amount
+	time = false
 
 func _on_Battery_TimeLife():
 	time_life.value += 10
@@ -61,5 +62,5 @@ func _on_Dialog_start():
 	time = true
 
 func _on_Dialog_stop():
-		time = false
+	time = false
 
