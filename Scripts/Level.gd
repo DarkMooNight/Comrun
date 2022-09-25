@@ -1,5 +1,7 @@
 extends Node2D
 
+export var dialog = true
+
 func _ready():
 	get_node("Transition_out").connect("srart", get_node("HUD/StartRun"), "_on_Transition_out_srart")
 	get_node("HUD/StartRun").connect("Run", get_node("HUD"), "_on_StartRun_Run")
@@ -14,9 +16,10 @@ func _ready():
 	get_node("Player").connect("UpdateCoin", get_node("HUD"), "UpdateCoin")
 	get_node("object/door").connect("teleport", get_node("HUD/Win"), "_on_door_teleport")
 	get_node("object/perecl").connect("Is_Active", get_node("object/door"), "_on_perecl_Is_Active")
-	get_node("Dialog").connect("start", get_node("HUD"), "_on_Dialog_start")
-	get_node("Dialog").connect("stop", get_node("HUD"), "_on_Dialog_stop")
-	get_node("object/DialogBox").connect("body_entered", get_node("Dialog"), "_on_Dialog_body_entered")
-	get_node("object/DialogBox").connect("body_exited", get_node("Dialog"), "_on_Dialog_body_exited")
-	get_node("Dialog").connect("end",get_node("object/DialogBox"), "_on_end")
+	if dialog == true:
+		get_node("Dialog").connect("start", get_node("HUD"), "_on_Dialog_start")
+		get_node("Dialog").connect("stop", get_node("HUD"), "_on_Dialog_stop")
+		get_node("object/DialogBox").connect("body_entered", get_node("Dialog"), "_on_Dialog_body_entered")
+		get_node("object/DialogBox").connect("body_exited", get_node("Dialog"), "_on_Dialog_body_exited")
+		get_node("Dialog").connect("end",get_node("object/DialogBox"), "_on_end")
 

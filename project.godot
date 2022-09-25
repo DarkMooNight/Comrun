@@ -57,6 +57,13 @@ window/stretch/aspect="expand"
 
 enabled=PoolStringArray(  )
 
+[importer_defaults]
+
+csv_translation={
+"compress": true,
+"delimiter": 0
+}
+
 [input]
 
 dialogic_default_action={
@@ -94,6 +101,8 @@ pointing/emulate_touch_from_mouse=true
 [locale]
 
 translations=PoolStringArray( "res://localization/loc.en.translation", "res://localization/loc.ru.translation" )
+translation_remaps={
+}
 
 [physics]
 

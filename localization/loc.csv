@@ -1,0 +1,60 @@
+﻿id,ru,en
+CONTINUE,Продолжить,Continue
+RESTART,Перезапустить,Restart
+MENU,Меню,Menu
+EXIT,Выйти,Exit
+NO,Нет,No
+ADVERTISING,Реклама,Advertising
+COINS,20 монет,20 Coins
+GAME OVER,ПОРАЖЕНИЕ,GAME OVER
+LEVELS,УРОВНИ,LEVELS
+BACK,Назад,Back
+START,Начать,Start
+STORE,МАГАЗИН,STORE
+PAUSE,ПАУЗА,PAUSE
+START RUN,Начать бежать,Start Run
+SELECT,Выбрать,Select
+SELECTED,Выбран,Selected
+GAME WIN,ПОБЕДА,GAME WIN
+CONTINUE FOR COINS,Продолжить за монеты,Continue for coins
+STORE1,Магазин,Store
+HISTORY,"Всем привет, в этой игре вы сможете увидеть историю одного компьютера, который решил путешествовать по миру. Вам предстоит пройти сложный и опасный путь для того чтобы завершить путешествие.","Hello there, in this game you will be able to see the history of one computer that decided to travel the world. You have to go through a difficult and dangerous path in order to complete the journey."
+HIDS,Двойной прыжок,Double jump
+HIDS2,Присесть,Sit down
+HIDS3,Прыжки от стен,Jumping on walls
+HIDS4,Чекпоинт,Checkpoint
+HIDS5,Активация портала,Activation of the portal
+HIDS6,Портал,Portal
+HIDS7,Прыгни на врага,Jump on the enemy
+HIDS8,Жизни,Life
+HIDS9,Не всех врагов можно убить,Not all enemies can be killed
+DIALOG1,Вот и начинается мое приключение в новый мир.,So my adventure into a new world begins.
+DIALOG2,Что-то слишком легко...,Something is too easy...
+DIALOG3,"У меня такое ощущение, что за мной кто-то наблюдает...",I feel like someone is chasing me …
+DIALOG4,"Как-то я устал, а ведь только начал...","Somehow I'm tired, but I've just started..."
+DIALOG5,"Надо бы монитор протереть, а то не вижу куда бегу.","I can barely see what's infront of me, let me clean up my screen."
+DIALOG6,"Хм, иногда я чувствую что мной кто-то управляет. Хотя не, наверное кажется.",I don't know if it's just a feeling but maybe there is someone who's controlling me…
+DIALOG7,Сейчас бы новой термопасты залить.,Now I would like to pour a new thermal paste.
+DIALOG8,Может стоит передохнуть и привести мысли в порядок?,Let's take a break and make our thoughts clear?
+DIALOG9,Зачем я вышел из дома?,Why did I leave the house?
+DIALOG10,"Когда кончится эта зима, все запчасти уже замерзли.",I hope winter will end soon or else we'll stay without our spares.
+DIALOG11,Хотел бы я и дальше любоваться этими пейзажами...,All I wanted was enjoying these landscapes/ I wish I could enjoy these landscapes more...
+DIALOG12,"Ха-Ха-Ха-Ха-Ха-Ха. Ой, что-то заклинило.","Ha-ha-ha-ha-ha-ha-ha-ha. Oops, stucked."
+DIALOG13,"Эхх, что-то блок питания барахлит в последнее время..","Uh, the power pack is going down lately..."
+DIALOG14,"Кажется винтик отвалился, надо новый вкрутить.","it seems like a screw fell off, need to change it."
+DIALOG15,"Эх, творческий кризис...","Eh, a creative crisis..."
+DIALOG16,Я почти не чувствую своих ног.,I'm so exhausted.
+DIALOG17,"Мне кажется я вижу растаявший снег, надо спешить.","Let's hurry up, snow is starting to melt."
+DIALOG18,"Черт, это место настоящий ад.","This place is hell, damn."
+DIALOG19,Такими темпами и сгореть можно от перегрева.,At this pace we can get burned.
+DIALOG20,Как доберусь до ближайшего магазина поменяю кулер.,"As soon as I get to the nearest store, I will change the cooler."
+DIALOG21,Откуда появились все эти чудовища? ,Where did all these monsters come from?
+DIALOG22,Скоро я тут поджарюсь.,I'm going to fry here soon.
+DIALOG23,"Понаблюдав, я заметил что похудел.","After watching, I noticed that I had lost weight."
+DIALOG24,Как же меня все достало...,I'm sick of all of this…
+DIALOG25,Мне кажется или я могу поменять свое обличие?,"I think i can change my guise, right?"
+DIALOG26,Для чего я собираю эти монеты?,For what am I collecting all these coins?
+DIALOG27,"Надеюсь что все это кошмар, который мне снится.",I hope it's just a dream…
+DIALOG28,Кхкхкхкхкгкхкхк. Звуковая карта уже не выдерживает этой жары., Kxkxkxk. The audio card can't handle this heat anymore.
+DIALOG29,Как далеко я могу зайти?,How far can I go?
+DIALOG30,"Черт, я совсем запутался куда мне бежать.","Damn, I'm confused where should I run. "
