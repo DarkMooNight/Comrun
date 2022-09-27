@@ -26,7 +26,7 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "Enemy": "",
-"Player": "res://Ui/Player.png",
+"Player": "",
 "YandexAds": "res://yandex-ads-lib/icon.png"
 }
 
@@ -35,7 +35,7 @@ _global_script_class_icons={
 config/name="Comrun"
 run/main_scene="res://Level/Menu/GodotStartupScreen.tscn"
 config/use_custom_user_dir=true
-config/icon="res://Ui/Player.png"
+config/icon="res://comran.png"
 
 [autoload]
 

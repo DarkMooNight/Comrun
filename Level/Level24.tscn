@@ -41,7 +41,7 @@ visible = false
 
 [node name="Win" parent="HUD" instance=ExtResource( 18 )]
 visible = false
-world_scene = "res://Level/Level25.tscn"
+world_scene = "res://Level/Menu/MeinMenu.tscn"
 
 [node name="StartRun" parent="HUD" instance=ExtResource( 20 )]
 pause_mode = 2
@@ -92,6 +92,9 @@ position = Vector2( 450, 169 )
 
 [node name="Battery" parent="object" instance=ExtResource( 12 )]
 position = Vector2( 2197, 39 )
+
+[node name="Battery3" parent="object" instance=ExtResource( 12 )]
+position = Vector2( 1040, 6 )
 
 [node name="Battery2" parent="object" instance=ExtResource( 12 )]
 position = Vector2( 1601, 88 )
@@ -219,6 +222,3 @@ position = Vector2( 1856, 89 )
 
 [node name="Dialog" parent="." instance=ExtResource( 11 )]
 messeng = "DIALOG24"
-
-[connection signal="TimeLife" from="object/Battery" to="HUD" method="_on_Battery_TimeLife"]
-[connection signal="TimeLife" from="object/Battery2" to="HUD" method="_on_Battery_TimeLife"]

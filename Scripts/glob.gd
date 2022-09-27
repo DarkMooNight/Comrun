@@ -4,11 +4,12 @@ var alpha
 const SAVE_DIR = "user://saves/"
 
 func _ready():
-	TranslationServer.set_locale("en")
+	var locale = OS.get_locale()
+	TranslationServer.set_locale(locale)
 	var random = RandomNumberGenerator.new()
 	random.randomize()
-	var rnum = random.randi()%3 + 1
-	alpha = load("res://background/Bg" + str(rnum) + ".tscn")
+	var rnumBack = random.randi()%3 + 1
+	alpha = load("res://background/Bg" + str(rnumBack) + ".tscn")
 
 var levels = []
 var unlockedLevels = 1

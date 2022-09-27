@@ -58,7 +58,7 @@ wait_time = 0.1
 one_shot = true
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 5.0
+wait_time = 4.0
 one_shot = true
 
 [connection signal="messege" from="." to="NinePatchRect/Messenge" method="_on_Dialog_messege"]

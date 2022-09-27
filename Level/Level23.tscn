@@ -143,6 +143,14 @@ z_index = -1
 position = Vector2( 658, 185 )
 z_index = -1
 
+[node name="Lava26" parent="enemy" instance=ExtResource( 8 )]
+position = Vector2( 361, 229 )
+z_index = -1
+
+[node name="Lava27" parent="enemy" instance=ExtResource( 8 )]
+position = Vector2( 399, 228 )
+z_index = -1
+
 [node name="Lava6" parent="enemy" instance=ExtResource( 8 )]
 position = Vector2( 696, 185 )
 z_index = -1
@@ -244,6 +252,3 @@ position = Vector2( 2338, -141 )
 
 [node name="Dialog" parent="." instance=ExtResource( 2 )]
 messeng = "DIALOG23"
-
-[connection signal="TimeLife" from="object/Battery" to="HUD" method="_on_Battery_TimeLife"]
-[connection signal="TimeLife" from="object/Battery2" to="HUD" method="_on_Battery_TimeLife"]

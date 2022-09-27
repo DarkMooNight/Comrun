@@ -182,5 +182,3 @@ shape = SubResource( 1 )
 
 [node name="Dialog" parent="." instance=ExtResource( 19 )]
 messeng = "DIALOG2"
-
-[connection signal="TimeLife" from="object/Battery" to="HUD" method="_on_Battery_TimeLife"]

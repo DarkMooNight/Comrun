@@ -217,5 +217,3 @@ position = Vector2( 1111, 160 )
 
 [node name="Dialog" parent="." instance=ExtResource( 21 )]
 messeng = "DIALOG21"
-
-[connection signal="TimeLife" from="object/Battery" to="HUD" method="_on_Battery_TimeLife"]

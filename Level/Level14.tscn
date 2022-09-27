@@ -135,7 +135,7 @@ position = Vector2( 2746, -7 )
 position = Vector2( 2756, -22 )
 
 [node name="DialogBox" type="Area2D" parent="object"]
-position = Vector2( 2723, 87 )
+position = Vector2( 2701, 99 )
 script = ExtResource( 22 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="object/DialogBox"]
@@ -350,8 +350,3 @@ rotation = -1.57079
 
 [node name="Dialog" parent="." instance=ExtResource( 23 )]
 messeng = "DIALOG14"
-
-[connection signal="TimeLife" from="object/Battery" to="HUD" method="_on_Battery_TimeLife"]
-[connection signal="TimeLife" from="object/Battery4" to="HUD" method="_on_Battery_TimeLife"]
-[connection signal="TimeLife" from="object/Battery2" to="HUD" method="_on_Battery_TimeLife"]
-[connection signal="TimeLife" from="object/Battery3" to="HUD" method="_on_Battery_TimeLife"]

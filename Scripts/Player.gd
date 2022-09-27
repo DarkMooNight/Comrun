@@ -1,5 +1,5 @@
 extends KinematicBody2D
-class_name Player, "res://Ui/Player.png"
+class_name Player
 
 var mov = Vector2()
 var speed = 85

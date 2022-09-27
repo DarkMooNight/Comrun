@@ -338,9 +338,6 @@ shape = SubResource( 4 )
 [node name="Dialog" parent="." instance=ExtResource( 18 )]
 messeng = "DIALOG10"
 
-[connection signal="TimeLife" from="object/Battery" to="HUD" method="_on_Battery_TimeLife"]
-[connection signal="TimeLife" from="object/Battery2" to="HUD" method="_on_Battery_TimeLife"]
-
 [editable path="enemy/Shoot"]
 [editable path="enemy/Shoot2"]
 [editable path="enemy/Shoot3"]
