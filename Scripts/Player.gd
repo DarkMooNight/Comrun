@@ -16,6 +16,7 @@ var last_checkpoint: Area2D = null
 onready var checkpoint: Tween = get_node("CheckPoint")
 
 signal UpdateCoin(value)
+signal UpdateLife(value)
 signal Dead()
 signal Check()
 
@@ -190,6 +191,9 @@ func add_coin(value):
 	SoundPlayer.play_sound(SoundPlayer.Coin)
 	emit_signal("UpdateCoin", Glob.coin)
 	Glob.save_game()
+
+func add_life(value):
+	emit_signal("UpdateLife", value)
 
 #Checkpoint
 func go_to_checkpoint():
