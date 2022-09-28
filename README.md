@@ -11,5 +11,5 @@ Our game combines runner and platformer mechanics. You have to go through 53 lev
 
 ### Download: 
 [![Play Store](https://img.shields.io/badge/Google_Play-414141?style=for-the-badge&logo=google-play&logoColor=white)](https://play.google.com/store/apps/details?id=com.yoshi.comrun) 
-[![AppGallery](https://img.shields.io/badge/AppGallery-red?style=for-the-badge)]() 
+[![AppGallery](https://img.shields.io/badge/AppGallery-red?style=for-the-badge)](https://appgallery.huawei.ru/app/C107121817) 
 [![RuStore](https://img.shields.io/badge/RuStore-blue?style=for-the-badge&logo=vk&logoColor=white)](https://apps.rustore.ru/app/com.yoshi.comrun) 
