@@ -17,7 +17,10 @@ func _on_Back_pressed():
 	get_tree().change_scene("res://Level/Menu/MeinMenu.tscn")
 
 func change_level(lvl_no):
-	get_tree().change_scene("res://Level/Level"+lvl_no+".tscn")
+	if not get_tree().change_scene("res://Level/Level"+lvl_no+".tscn"):
+		get_tree().change_scene("res://Level/Level"+lvl_no+".tscn")
+	else:
+		get_tree().change_scene("res://Level/Menu/Soon.tscn")
 
 func _on_lvl_ad_pressed():
 	get_tree().change_scene("res://Level/Menu/Levels_ad.tscn")

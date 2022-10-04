@@ -227,7 +227,6 @@ anchor_left = 0.257
 anchor_right = 0.743
 anchor_bottom = 1.0
 margin_left = -0.017992
-margin_top = -1.09139e-11
 margin_right = 0.0180054
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 0
