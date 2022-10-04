@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/disk.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/Rocky Roads/disk.png" type="Texture" id=2]
+[ext_resource path="res://Ui/diskUI.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/Collected.png" type="Texture" id=3]
 [ext_resource path="res://game_music/Big Egg collect 1.wav" type="AudioStream" id=4]
 
