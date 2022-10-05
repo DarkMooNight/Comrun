@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Scripts/Level.gd" type="Script" id=1]
 [ext_resource path="res://Level/Menu/Transition_out.tscn" type="PackedScene" id=2]
@@ -23,7 +23,6 @@
 [ext_resource path="res://Level/Object/trampolin.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Level/Object/FallingPlatform.tscn" type="PackedScene" id=22]
 [ext_resource path="res://Enemy/Shpik.tscn" type="PackedScene" id=23]
-[ext_resource path="res://Level/Object/hids.tscn" type="PackedScene" id=24]
 [ext_resource path="res://Scripts/DialogBox.gd" type="Script" id=25]
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -273,10 +272,6 @@ position = Vector2( 1300, 98 )
 
 [node name="FallingPlatform2" parent="object" instance=ExtResource( 22 )]
 position = Vector2( 1377, 98 )
-
-[node name="hids" parent="object" instance=ExtResource( 24 )]
-position = Vector2( 2171, 3 )
-hids = "HIDS"
 
 [node name="DialogBox" type="Area2D" parent="object"]
 position = Vector2( 3380, -122 )

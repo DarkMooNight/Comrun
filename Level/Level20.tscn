@@ -95,6 +95,15 @@ position = Vector2( 3900, -122 )
 [node name="Battery3" parent="object" instance=ExtResource( 20 )]
 position = Vector2( 3491, 70 )
 
+[node name="Battery6" parent="object" instance=ExtResource( 20 )]
+position = Vector2( 4071, 135 )
+
+[node name="Battery7" parent="object" instance=ExtResource( 20 )]
+position = Vector2( 3485, -105 )
+
+[node name="Battery5" parent="object" instance=ExtResource( 20 )]
+position = Vector2( 3270, 56 )
+
 [node name="Battery4" parent="object" instance=ExtResource( 20 )]
 position = Vector2( 2871, 134 )
 
