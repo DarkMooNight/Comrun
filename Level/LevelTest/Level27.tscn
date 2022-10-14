@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Scripts/DialogBox.gd" type="Script" id=1]
 [ext_resource path="res://Level/Menu/PauseMenu.tscn" type="PackedScene" id=2]
@@ -14,11 +14,13 @@
 [ext_resource path="res://tile/decoration.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Level/Menu/GameOver.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Level/Object/Dialog.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scripts/Level.gd" type="Script" id=15]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 26 )
 
 [node name="Level27" type="Node2D"]
+script = ExtResource( 15 )
 
 [node name="HUD" parent="." instance=ExtResource( 4 )]
 max_amount = 25

@@ -1,18 +1,29 @@
 extends Node
 
 onready var mus = $Music
+var random
+var rnumMusic
+var finish = false
 var beta
 
+func genety():
+	random = RandomNumberGenerator.new()
+	random.randomize()
+	rnumMusic = random.randi_range(1, 6)
+	beta = load("res://game_music/music/" + str(rnumMusic) + ".mp3")
+
+func _ready():
+	genety()
+
 func play_music():
-	random_music()
 	mus.stream = beta
 	mus.play()
 
-func _on_Music_finished():
-	play_music()
+func _process(delta):
+	if(finish == true):
+		genety()
+		finish = false
+		play_music()
 
-func random_music():
-	var random = RandomNumberGenerator.new()
-	random.randomize()
-	var rnumMusic = random.randi_range(1, 6)
-	beta = load("res://game_music/music/" + str(rnumMusic) + ".mp3")
+func _on_Music_finished():
+	finish = true

@@ -19,7 +19,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 26 )
 
-[node name="Level30" type="Node2D"]
+[node name="Level35" type="Node2D"]
 script = ExtResource( 15 )
 
 [node name="HUD" parent="." instance=ExtResource( 2 )]
@@ -73,4 +73,4 @@ shape = SubResource( 1 )
 [node name="enemy" type="Node2D" parent="."]
 
 [node name="Dialog" parent="." instance=ExtResource( 4 )]
-messeng = "DIALOG30"
+messeng = "DIALOG35"
