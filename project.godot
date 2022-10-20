@@ -35,6 +35,7 @@ _global_script_class_icons={
 config/name="Comrun"
 run/main_scene="res://Level/Menu/GodotStartupScreen.tscn"
 config/use_custom_user_dir=true
+boot_splash/image="res://splash.png"
 config/icon="res://comrun.png"
 
 [autoload]

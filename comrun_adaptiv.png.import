@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/comrun.png-7d73a00ce5cc39ce8745dde58ce7cada.stex"
+path="res://.import/comrun_adaptiv.png-a6409a4cd6bfb2707a6db1a7332427ee.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://comrun.png"
-dest_files=[ "res://.import/comrun.png-7d73a00ce5cc39ce8745dde58ce7cada.stex" ]
+source_file="res://comrun_adaptiv.png"
+dest_files=[ "res://.import/comrun_adaptiv.png-a6409a4cd6bfb2707a6db1a7332427ee.stex" ]
 
 [params]
 
