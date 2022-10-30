@@ -50,7 +50,7 @@ func init() -> bool:
 		return true
 	return false
 
-# connect the AdMob Java signals
+# connect the YandexAds Java signals
 func connect_signals() -> void:
 	_yandex_singleton.connect("_on_banner_loaded", self, "_on_banner_loaded")
 	_yandex_singleton.connect("_on_banner_failed_to_load", self, "_on_banner_failed_to_load")

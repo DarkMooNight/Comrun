@@ -21,3 +21,9 @@ func _on_Ru_pressed():
 
 func _on_En_pressed():
 	TranslationServer.set_locale("en")
+
+func _on_vk_pressed():
+	OS.shell_open('https://vk.com/darkmoonight')
+
+func _on_discord_pressed():
+	OS.shell_open('https://discord.com/invite/ADRSh9XY2v')
