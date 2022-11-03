@@ -320,13 +320,13 @@ anims/character_normal = SubResource( 4 )
 anims/character_red = SubResource( 12 )
 
 [node name="Coin" type="HBoxContainer" parent="."]
-anchor_left = 0.762
+anchor_left = 0.802
 anchor_top = 0.078
-anchor_right = 0.762
+anchor_right = 0.802
 anchor_bottom = 0.189
-margin_left = -27.84
+margin_left = -40.64
 margin_top = -0.04
-margin_right = 28.16
+margin_right = 15.36
 margin_bottom = -0.0200005
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -367,16 +367,10 @@ custom_fonts/font = SubResource( 6 )
 text = "0"
 valign = 1
 
-[node name="CoinPlus" type="TextureButton" parent="."]
-anchor_left = 0.885
-anchor_top = 0.094
-anchor_right = 0.885
-anchor_bottom = 0.174
-margin_left = -7.20001
-margin_top = 0.0799999
-margin_right = 13.8
-margin_bottom = 3.68
-rect_scale = Vector2( 0.7, 0.8 )
+[node name="CoinPlus" type="TextureButton" parent="Coin"]
+margin_left = 60.0
+margin_right = 81.0
+margin_bottom = 20.0
 texture_normal = ExtResource( 21 )
 texture_pressed = ExtResource( 3 )
 
@@ -416,7 +410,7 @@ rewarded_id = "R-M-1663731-1"
 [connection signal="pressed" from="table/Players/button/left" to="." method="_on_left_pressed"]
 [connection signal="pressed" from="table/Players/button/center" to="." method="_on_center_pressed"]
 [connection signal="pressed" from="table/Players/button/right" to="." method="_on_right_pressed"]
-[connection signal="pressed" from="CoinPlus" to="." method="_on_CoinPlus_pressed"]
+[connection signal="pressed" from="Coin/CoinPlus" to="." method="_on_CoinPlus_pressed"]
 [connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]
 [connection signal="rewarded" from="Yandex" to="." method="_on_Yandex_rewarded"]
 [connection signal="rewarded_video_loaded" from="Yandex" to="." method="_on_Yandex_rewarded_video_loaded"]

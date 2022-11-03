@@ -204,6 +204,32 @@ margin_right = 233.0
 margin_bottom = 94.0
 button = 35
 
+[node name="lvl_green" type="TextureButton" parent="."]
+anchor_left = 0.891
+anchor_top = 0.5
+anchor_right = 0.891
+anchor_bottom = 0.5
+margin_left = -0.119995
+margin_top = -11.0
+margin_right = 22.0
+margin_bottom = 11.0
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 8 )
+expand = true
+
+[node name="lvl_winter" type="TextureButton" parent="."]
+anchor_left = 0.106
+anchor_top = 0.5
+anchor_right = 0.106
+anchor_bottom = 0.5
+margin_left = -21.92
+margin_top = -11.0
+margin_right = 0.079998
+margin_bottom = 11.0
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 9 )
+expand = true
+
 [node name="Buttons" type="Control" parent="."]
 anchor_top = 0.864
 anchor_right = 1.0
@@ -229,7 +255,6 @@ anchor_left = 0.257
 anchor_right = 0.743
 anchor_bottom = 1.0
 margin_left = -0.017992
-margin_top = -1.09139e-11
 margin_right = 0.0180054
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 0
@@ -239,31 +264,6 @@ text = "BACK"
 align = 1
 valign = 1
 
-[node name="lvl_green" type="TextureButton" parent="Buttons"]
-anchor_left = 0.95
-anchor_top = -1.926
-anchor_right = 0.95
-anchor_bottom = -1.926
-margin_left = -22.0
-margin_top = -10.998
-margin_bottom = 11.002
-texture_normal = ExtResource( 7 )
-texture_pressed = ExtResource( 8 )
-expand = true
-
-[node name="lvl_winter" type="TextureButton" parent="Buttons"]
-anchor_left = 0.041
-anchor_top = -1.926
-anchor_right = 0.041
-anchor_bottom = -1.926
-margin_left = -0.120001
-margin_top = -10.998
-margin_right = 21.88
-margin_bottom = 11.002
-texture_normal = ExtResource( 6 )
-texture_pressed = ExtResource( 9 )
-expand = true
-
+[connection signal="pressed" from="lvl_green" to="." method="_on_lvl_green_pressed"]
+[connection signal="pressed" from="lvl_winter" to="." method="_on_lvl_winter_pressed"]
 [connection signal="pressed" from="Buttons/Back" to="." method="_on_Back_pressed"]
-[connection signal="pressed" from="Buttons/lvl_green" to="." method="_on_lvl_green_pressed"]
-[connection signal="pressed" from="Buttons/lvl_winter" to="." method="_on_lvl_winter_pressed"]

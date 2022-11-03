@@ -73,7 +73,7 @@ anchor_left = 0.078
 anchor_top = 0.239
 anchor_right = 0.916
 anchor_bottom = 0.772
-margin_left = 0.039999
+margin_left = -0.960001
 margin_top = -0.0200005
 margin_right = -0.119995
 margin_bottom = 0.0399933
@@ -81,9 +81,9 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="MarginContainer" type="MarginContainer" parent="CenterContainer"]
-margin_left = 17.0
+margin_left = 18.0
 margin_top = 1.0
-margin_right = 250.0
+margin_right = 251.0
 margin_bottom = 95.0
 
 [node name="LevelsButtons" type="GridContainer" parent="CenterContainer/MarginContainer"]
@@ -202,6 +202,19 @@ margin_right = 233.0
 margin_bottom = 94.0
 button = 17
 
+[node name="lvl_ad" type="TextureButton" parent="."]
+anchor_left = 0.891
+anchor_top = 0.5
+anchor_right = 0.891
+anchor_bottom = 0.5
+margin_left = -0.119995
+margin_top = -11.0
+margin_right = 21.88
+margin_bottom = 11.0
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 8 )
+expand = true
+
 [node name="Buttons" type="Control" parent="."]
 anchor_top = 0.864
 anchor_right = 1.0
@@ -236,17 +249,5 @@ text = "BACK"
 align = 1
 valign = 1
 
-[node name="lvl_ad" type="TextureButton" parent="Buttons"]
-anchor_left = 0.95
-anchor_top = -1.926
-anchor_right = 0.95
-anchor_bottom = -1.926
-margin_left = -22.0
-margin_top = -10.998
-margin_bottom = 11.002
-texture_normal = ExtResource( 7 )
-texture_pressed = ExtResource( 8 )
-expand = true
-
+[connection signal="pressed" from="lvl_ad" to="." method="_on_lvl_ad_pressed"]
 [connection signal="pressed" from="Buttons/Back" to="." method="_on_Back_pressed"]
-[connection signal="pressed" from="Buttons/lvl_ad" to="." method="_on_lvl_ad_pressed"]
