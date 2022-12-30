@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://character/character_normal.png" type="Texture" id=1]
 [ext_resource path="res://Ui/Born2bSportyV2.ttf" type="DynamicFontData" id=2]
@@ -28,6 +28,7 @@
 [ext_resource path="res://Scripts/random_bg.gd" type="Script" id=26]
 [ext_resource path="res://Ui/vk_aseprite.png" type="Texture" id=27]
 [ext_resource path="res://Ui/discord_aseprit.png" type="Texture" id=28]
+[ext_resource path="res://Ui/telegram_aseprite.png" type="Texture" id=29]
 
 [sub_resource type="Shader" id=7]
 code = "shader_type canvas_item;
@@ -436,6 +437,12 @@ margin_right = 22.0
 margin_bottom = 46.0
 texture_normal = ExtResource( 28 )
 
+[node name="telegram" type="TextureButton" parent="Link/links"]
+margin_top = 52.0
+margin_right = 22.0
+margin_bottom = 72.0
+texture_normal = ExtResource( 29 )
+
 [connection signal="pressed" from="Control/Menu/Buttons/StartGame" to="." method="_on_StartGame_pressed"]
 [connection signal="pressed" from="Control/Menu/Buttons/Store" to="." method="_on_Store_pressed"]
 [connection signal="pressed" from="Control/Menu/Buttons/Exit" to="." method="_on_Exit_pressed"]
@@ -443,3 +450,4 @@ texture_normal = ExtResource( 28 )
 [connection signal="pressed" from="Play/Settings2/Ru" to="." method="_on_Ru_pressed"]
 [connection signal="pressed" from="Link/links/vk" to="." method="_on_vk_pressed"]
 [connection signal="pressed" from="Link/links/discord" to="." method="_on_discord_pressed"]
+[connection signal="pressed" from="Link/links/telegram" to="." method="_on_telegram_pressed"]

@@ -26,4 +26,8 @@ func _on_vk_pressed():
 	OS.shell_open('https://vk.com/darkmoonight')
 
 func _on_discord_pressed():
-	OS.shell_open('https://discord.com/invite/ADRSh9XY2v')
+	OS.shell_open('https://discord.com/invite/JMMa9aHh8f')
+
+
+func _on_telegram_pressed():
+	OS.shell_open('https://t.me/+bXvLJdzO2pZiZGVi')
