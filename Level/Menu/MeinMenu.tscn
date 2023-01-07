@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://character/character_normal.png" type="Texture" id=1]
 [ext_resource path="res://Ui/Born2bSportyV2.ttf" type="DynamicFontData" id=2]
@@ -29,6 +29,7 @@
 [ext_resource path="res://Ui/vk_aseprite.png" type="Texture" id=27]
 [ext_resource path="res://Ui/discord_aseprit.png" type="Texture" id=28]
 [ext_resource path="res://Ui/telegram_aseprite.png" type="Texture" id=29]
+[ext_resource path="res://yandex-ads-lib/yandex_ads.gd" type="Script" id=30]
 
 [sub_resource type="Shader" id=7]
 code = "shader_type canvas_item;
@@ -223,12 +224,13 @@ margin_bottom = 180.0
 
 [node name="Menu" type="TextureRect" parent="Control"]
 anchor_left = 0.089
-anchor_top = 0.1
+anchor_top = 0.061
 anchor_right = 0.986
-anchor_bottom = 0.887
-margin_left = 0.0900002
+anchor_bottom = 0.848
+margin_left = 0.0900097
+margin_top = 0.0199995
 margin_right = -28.34
-margin_bottom = -23.66
+margin_bottom = -23.64
 rect_scale = Vector2( 1.2, 1.2 )
 texture = ExtResource( 10 )
 expand = true
@@ -324,9 +326,11 @@ margin_bottom = 122.08
 script = ExtResource( 13 )
 
 [node name="Player" type="TextureRect" parent="Play"]
+anchor_top = -0.066
 anchor_right = 1.0
-anchor_bottom = 0.697
-margin_bottom = -0.0340042
+anchor_bottom = 0.631
+margin_top = 0.052
+margin_bottom = 0.0179977
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture = ExtResource( 16 )
@@ -335,37 +339,37 @@ flip_h = true
 
 [node name="platform" type="TextureRect" parent="Play"]
 anchor_left = 0.345
-anchor_top = 0.639
+anchor_top = 0.574
 anchor_right = 0.615
-anchor_bottom = 0.689
+anchor_bottom = 0.615
 margin_left = -0.0600014
-margin_top = 0.0419922
+margin_top = -0.0279922
 margin_right = -0.0200043
-margin_bottom = -1.058
+margin_bottom = -0.0299835
 texture = ExtResource( 11 )
 expand = true
 
 [node name="ru_en" type="TextureRect" parent="Play"]
 anchor_left = 0.277
-anchor_top = 0.68
+anchor_top = 0.615
 anchor_right = 0.662
-anchor_bottom = 0.844
+anchor_bottom = 0.779
 margin_left = 0.0039978
-margin_top = 0.0400009
+margin_top = -0.0299988
 margin_right = 0.0239944
-margin_bottom = 0.0319977
+margin_bottom = -0.0380096
 texture = ExtResource( 12 )
 expand = true
 
 [node name="Settings" type="HBoxContainer" parent="Play"]
 anchor_left = 0.264
-anchor_top = -0.221
+anchor_top = -0.295
 anchor_right = 0.676
-anchor_bottom = -0.025
+anchor_bottom = -0.098
 margin_left = -0.0719986
-margin_top = -0.0380001
+margin_top = -0.00999832
 margin_right = -0.0480118
-margin_bottom = 0.0499961
+margin_bottom = -0.0440035
 custom_constants/separation = 35
 
 [node name="MusicMenu" parent="Play/Settings" instance=ExtResource( 4 )]
@@ -379,13 +383,13 @@ margin_bottom = 23.0
 
 [node name="Settings2" type="HBoxContainer" parent="Play"]
 anchor_left = 0.297
-anchor_top = 0.68
+anchor_top = 0.623
 anchor_right = 0.669
-anchor_bottom = 0.844
+anchor_bottom = 0.787
 margin_left = 0.0439987
-margin_top = 0.0400009
+margin_top = -0.00600433
 margin_right = -0.012001
-margin_bottom = 0.0319977
+margin_bottom = -0.0140152
 custom_constants/separation = 6
 
 [node name="En" type="Button" parent="Play/Settings2"]
@@ -443,6 +447,10 @@ margin_right = 22.0
 margin_bottom = 72.0
 texture_normal = ExtResource( 29 )
 
+[node name="YandexAds" type="Node" parent="."]
+script = ExtResource( 30 )
+banner_id = "R-M-1663731-4"
+
 [connection signal="pressed" from="Control/Menu/Buttons/StartGame" to="." method="_on_StartGame_pressed"]
 [connection signal="pressed" from="Control/Menu/Buttons/Store" to="." method="_on_Store_pressed"]
 [connection signal="pressed" from="Control/Menu/Buttons/Exit" to="." method="_on_Exit_pressed"]
@@ -451,3 +459,4 @@ texture_normal = ExtResource( 29 )
 [connection signal="pressed" from="Link/links/vk" to="." method="_on_vk_pressed"]
 [connection signal="pressed" from="Link/links/discord" to="." method="_on_discord_pressed"]
 [connection signal="pressed" from="Link/links/telegram" to="." method="_on_telegram_pressed"]
+[connection signal="banner_loaded" from="YandexAds" to="." method="_on_YandexAds_banner_loaded"]
