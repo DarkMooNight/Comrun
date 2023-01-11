@@ -9,11 +9,9 @@ func _on_Exit_pressed():
 
 func _on_StartGame_pressed():
 	get_tree().change_scene("res://Level/Menu/Levels.tscn")
-	$YandexAds.hide_banner()
 
 func _on_Store_pressed():
 	get_tree().change_scene("res://Level/Menu/Store.tscn")
-	$YandexAds.hide_banner()
 
 func _on_close_pressed():
 	$Internet.visible = false
@@ -36,3 +34,7 @@ func _on_telegram_pressed():
 
 func _on_YandexAds_banner_loaded():
 	$YandexAds.show_banner()
+
+
+func _on_MainMenu_tree_exited():
+	$YandexAds.hide_banner()

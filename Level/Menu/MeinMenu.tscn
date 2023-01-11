@@ -253,7 +253,7 @@ __meta__ = {
 }
 
 [node name="StartGame" type="Button" parent="Control/Menu/Buttons"]
-margin_right = 101.0
+margin_right = 100.0
 margin_bottom = 20.0
 focus_mode = 0
 enabled_focus_mode = 0
@@ -274,7 +274,7 @@ valign = 1
 
 [node name="Store" type="Button" parent="Control/Menu/Buttons"]
 margin_top = 25.0
-margin_right = 101.0
+margin_right = 100.0
 margin_bottom = 45.0
 focus_mode = 0
 enabled_focus_mode = 0
@@ -295,7 +295,7 @@ valign = 1
 
 [node name="Exit" type="Button" parent="Control/Menu/Buttons"]
 margin_top = 50.0
-margin_right = 101.0
+margin_right = 100.0
 margin_bottom = 70.0
 focus_mode = 0
 enabled_focus_mode = 0
@@ -451,6 +451,7 @@ texture_normal = ExtResource( 29 )
 script = ExtResource( 30 )
 banner_id = "R-M-1663731-4"
 
+[connection signal="tree_exited" from="." to="." method="_on_MainMenu_tree_exited"]
 [connection signal="pressed" from="Control/Menu/Buttons/StartGame" to="." method="_on_StartGame_pressed"]
 [connection signal="pressed" from="Control/Menu/Buttons/Store" to="." method="_on_Store_pressed"]
 [connection signal="pressed" from="Control/Menu/Buttons/Exit" to="." method="_on_Exit_pressed"]
